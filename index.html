@@ -1,28 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <title>Work Hours Logger</title>
+<meta charset="UTF-8">
+<title>Sample Ticker</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 120px;
+    width: 2880px;
+    overflow: hidden;
+}
+
+/* OUTER CONTAINER */
+.tcontainer {
+    width: 100%;
+    overflow: hidden; /* Hide scroll bar */
+}
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+    width: 100%;
+    padding-left: 100%; /* Push contents to right side of screen */
+    background-color: black;
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+0% {
+transform: translate3d(0, 0, 0);
+}
+100% {
+transform: translate3d(-100%, 0, 0);
+}
+}
+.ticker-move {
+    /* Basically move items from right side of screen to left in infinite loop */
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 10s;
+    align-items: center;
+}
+
+/* ITEMS */
+    .ticker-item {
+        display: inline-block; /* Lay items in a horizontal line */
+        padding: 0 2rem;
+        font-size: 120px;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+svg {
+scale: 130%;
+padding-top: 30px;
+}
+
+</style>
 </head>
+
 <body>
-  <h1>Work Hours Logger</h1>
-  
-  <button onclick="logWorkHours('Check In')">Check In</button>
-  <button onclick="logWorkHours('Check Out')">Check Out</button>
-
-  <script>
-
-  function logWorkHours(action) {
-    var xhr = new XMLHttpRequest();
-    
-    // Replace 'WEB_APP_URL' with your web app URL
-    xhr.open('GET', 'https://script.google.com/a/macros/swissnex.org/s/AKfycbzrGnowinOZk9KA6trunAIz2YVsERrT2DnMfF-d1OFVriDxJ97ONtC2V3idU0nI_r506Q/exec?action=' + action);
-    xhr.send();
-  }
-
-  </script>
-
+<div class="tcontainer">
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+        <div class="ticker-item"><svg width="140" height="140" viewBox="0 0 400 400" version="1.0" xmlns="http://www.w3.org/2000/svg" width="400.000000pt" height="400.000000pt" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" fill="red" stroke="none"> <path d="M1865 3386 c-199 -65 -334 -238 -335 -428 -1 -172 -104 -339 -253 -409 -68 -31 -120 -43 -260 -57 -245 -25 -417 -212 -417 -452 0 -240 172 -427 417 -452 140 -14 192 -26 260 -57 149 -70 252 -237 253 -409 1 -166 105 -323 266 -399 78 -38 80 -38 204 -38 124 0 126 0 204 38 161 76 265 233 266 399 1 172 104 339 253 409 68 31 120 43 260 57 245 25 417 212 417 452 0 180 -91 325 -253 405 -266 131 -576 3 -666 -276 -6 -20 -16 -81 -20 -135 -5 -55 -18 -123 -30 -154 -44 -116 -167 -230 -290 -267 -74 -23 -208 -23 -283 0 -81 25 -174 92 -230 165 -152 200 -102 484 110 629 78 53 139 72 272 83 179 15 297 78 381 203 157 236 71 541 -187 664 -75 36 -85 38 -189 40 -71 2 -124 -2 -150 -11z"/> </g> </svg></div><div class="ticker-item" style="color: blue;">Welcome</div><div class="ticker-item">to</div><div class="ticker-item" style="color: red;">The</div><div class="ticker-item" style="color: blue;">Grand</div><div class="ticker-item">Opening!</div><div class="ticker-item"><svg width="140" height="140" viewBox="0 0 400 400" version="1.0" xmlns="http://www.w3.org/2000/svg" width="400.000000pt" height="400.000000pt" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" fill="red" stroke="none"> <path d="M1865 3386 c-199 -65 -334 -238 -335 -428 -1 -172 -104 -339 -253 -409 -68 -31 -120 -43 -260 -57 -245 -25 -417 -212 -417 -452 0 -240 172 -427 417 -452 140 -14 192 -26 260 -57 149 -70 252 -237 253 -409 1 -166 105 -323 266 -399 78 -38 80 -38 204 -38 124 0 126 0 204 38 161 76 265 233 266 399 1 172 104 339 253 409 68 31 120 43 260 57 245 25 417 212 417 452 0 180 -91 325 -253 405 -266 131 -576 3 -666 -276 -6 -20 -16 -81 -20 -135 -5 -55 -18 -123 -30 -154 -44 -116 -167 -230 -290 -267 -74 -23 -208 -23 -283 0 -81 25 -174 92 -230 165 -152 200 -102 484 110 629 78 53 139 72 272 83 179 15 297 78 381 203 157 236 71 541 -187 664 -75 36 -85 38 -189 40 -71 2 -124 -2 -150 -11z"/> </g> </svg></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
-
-
-
