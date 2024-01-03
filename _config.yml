@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-feed
+title: Science Ticker
+description: This is the feed for the Science Ticker
+author: Elliot Stanton
