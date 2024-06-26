@@ -1,78 +1,53 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sample Ticker</title>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    height: 120px;
-    width: 2880px;
-    overflow: hidden;
-}
-
-/* OUTER CONTAINER */
-.tcontainer {
-    width: 100%;
-    overflow: hidden; /* Hide scroll bar */
-}
-/* MIDDLE CONTAINER */
-.ticker-wrap {
-    width: 100%;
-    padding-left: 100%; /* Push contents to right side of screen */
-    background-color: black;
-}
-
-/* INNER CONTAINER */
-@keyframes ticker {
-0% {
-transform: translate3d(0, 0, 0);
-}
-100% {
-transform: translate3d(-100%, 0, 0);
-}
-}
-.ticker-move {
-    /* Basically move items from right side of screen to left in infinite loop */
-    display: inline-block;
-    white-space: nowrap;
-    padding-right: 100%;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-name: ticker;
-    animation-duration: 5s;
-    align-items: center;
-    padding-top: -60;
-}
-
-/* ITEMS */
-    .ticker-item {
-        display: inline-block; /* Lay items in a horizontal line */
-        padding: 0 2rem;
-        font-size: 80px;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-svg {
-scale: 130%;
-padding-top: -10px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Business Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-<div class="tcontainer">
-  <div class="ticker-wrap">
-    <div class="ticker-move">
-        <div class="ticker-item"><svg width="140" height="140" viewBox="0 0 400 400" version="1.0" xmlns="http://www.w3.org/2000/svg" width="400.000000pt" height="400.000000pt" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" fill="red" stroke="none"> <path d="M1865 3386 c-199 -65 -334 -238 -335 -428 -1 -172 -104 -339 -253 -409 -68 -31 -120 -43 -260 -57 -245 -25 -417 -212 -417 -452 0 -240 172 -427 417 -452 140 -14 192 -26 260 -57 149 -70 252 -237 253 -409 1 -166 105 -323 266 -399 78 -38 80 -38 204 -38 124 0 126 0 204 38 161 76 265 233 266 399 1 172 104 339 253 409 68 31 120 43 260 57 245 25 417 212 417 452 0 180 -91 325 -253 405 -266 131 -576 3 -666 -276 -6 -20 -16 -81 -20 -135 -5 -55 -18 -123 -30 -154 -44 -116 -167 -230 -290 -267 -74 -23 -208 -23 -283 0 -81 25 -174 92 -230 165 -152 200 -102 484 110 629 78 53 139 72 272 83 179 15 297 78 381 203 157 236 71 541 -187 664 -75 36 -85 38 -189 40 -71 2 -124 -2 -150 -11z"/> </g> </svg></div><div class="ticker-item" style="color: blue;">Welcome</div><div class="ticker-item">to</div><div class="ticker-item" style="color: red;">The</div><div class="ticker-item" style="color: blue;">Grand</div><div class="ticker-item">Opening!</div><div class="ticker-item"><svg width="140" height="140" viewBox="0 0 400 400" version="1.0" xmlns="http://www.w3.org/2000/svg" width="400.000000pt" height="400.000000pt" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" fill="red" stroke="none"> <path d="M1865 3386 c-199 -65 -334 -238 -335 -428 -1 -172 -104 -339 -253 -409 -68 -31 -120 -43 -260 -57 -245 -25 -417 -212 -417 -452 0 -240 172 -427 417 -452 140 -14 192 -26 260 -57 149 -70 252 -237 253 -409 1 -166 105 -323 266 -399 78 -38 80 -38 204 -38 124 0 126 0 204 38 161 76 265 233 266 399 1 172 104 339 253 409 68 31 120 43 260 57 245 25 417 212 417 452 0 180 -91 325 -253 405 -266 131 -576 3 -666 -276 -6 -20 -16 -81 -20 -135 -5 -55 -18 -123 -30 -154 -44 -116 -167 -230 -290 -267 -74 -23 -208 -23 -283 0 -81 25 -174 92 -230 165 -152 200 -102 484 110 629 78 53 139 72 272 83 179 15 297 78 381 203 157 236 71 541 -187 664 -75 36 -85 38 -189 40 -71 2 -124 -2 -150 -11z"/> </g> </svg></div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to My Digital Resume</h1>
+            <p>A brief introduction about yourself and what you do.</p>
+        </div>
     </div>
-  </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2>About Me</h2>
+            <p>More details about your background, education, etc.</p>
+        </div>
+        <div class="col-md-6">
+            <h2>Skills</h2>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h2>Experience</h2>
+            <p>Details about your work experience.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h2>Contact Information</h2>
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+    </div>
 </div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
